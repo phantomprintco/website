@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Creepster">
+    <title>3D Prints</title>
+</head>
+<body>
+<header>
+    <table width="100%">
+        <tr>
+            <td class="headerlogo" id="headerlogo" width="50%">
+                <a href="/">
+                    <img src="static/logo.png" height="100px">
+                </a>
+            </td>
+            <td width="50%">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="static\menu.png" alt="Menu" style="width:40px;height:40px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="up">
+                                <div class="menuitem">
+                                    {% if user.is_authenticated %}
+                                    <a href ='/shirts'><section class="hotbar">SHIRTS</section></a><br>
+                                    <a href ='/hoodies'><section class="hotbar">HOODIES</section></a><br>
+                                    <a href ='/about'><section class="hotbar">ABOUT PHANTOM</section></a><br>
+                                    <a href ='/login'><section class="hotbar">LOGOUT</section></a><br>
+                                    <section class="death">G</section><br>
+                                    {% else %}
+                                    <a href ='/sign-up'><section class="hotbar">SIGN UP</section></a><br>
+                                    <a href ='/login'><section class="hotbar">LOGIN</section></a><br>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</header>
+<main>
+    <table width="99.5%">
+        <tr class="hometablerow">
+            <td class="hometablesingle">
+                    <img src="static/moonfrontback.png" class="shop_shirts">
+                    <h3>THE MOON</h3>
+                <a href="https://buy.stripe.com/eVag2S4CR4gWde84gi">
+                    <div class="buy">
+                        ORDER
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr class="hometablerow">
+            <td class="hometablesingle">
+                <img src="static/mushfrontback.png" class="shop_shirts">
+                    <h3>THE GARDEN</h3>
+                <a href="https://buy.stripe.com/eVag2S4CR4gWde84gi">
+                    <div class="buy">
+                        ORDER
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr class="hometablerow">
+            <td class="hometablesingle">
+                <img src="static/mensdripskull.png" class="shop_shirts">
+                <img src="static/womensdripskull.png" class="shop_shirts">
+                    <h3>THE MIND</h3>
+                <a href="https://buy.stripe.com/eVag2S4CR4gWde84gi">
+                    <div class="buy">
+                        ORDER
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+</main>
+</body>
+</html>

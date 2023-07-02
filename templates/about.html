@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Creepster">
+    <title>About</title>
+</head>
+<body>
+<header>
+    <table width="100%">
+        <tr>
+            <td class="headerlogo" id="headerlogo" width="50%">
+                <a href="/">
+                    <img src="static/logo.png" height="100px">
+                </a>
+            </td>
+            <td width="50%">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="static\menu.png" alt="Menu" style="width:40px;height:40px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="up">
+                                <div class="menuitem">
+                                    {% if user.is_authenticated %}
+                                    <a href ='/shirts'><section class="hotbar">SHIRTS</section></a><br>
+                                    <a href ='/hoodies'><section class="hotbar">HOODIES</section></a><br>
+                                    <a href ='/3dprints'><section class="hotbar">3D PRINTS</section></a><br>
+                                    <a href ='/login'><section class="hotbar">LOGOUT</section></a><br>
+                                    <section class="death">G</section><br>
+                                    {% else %}
+                                    <a href ='/sign-up'><section class="hotbar">SIGN UP</section></a><br>
+                                    <a href ='/login'><section class="hotbar">LOGIN</section></a><br>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</header>
+<main>
+  <table width="99.5%">
+    <tr class="hometablerow">
+      <td class="hometablesingle">FOUNDED BY CREATIVES, FOR CREATIVES.</td>
+      <td>BASED OUT OF IDAHO FALLS, IDAHO<br><br>
+          PHANTOM PRINTING IS THE LOCAL AND NATIONWIDE ONE-STOP SHOP FOR ALL PRINTING NEEDS.<br><br>
+         FROM VINYL TO CLOTHES TO 3 DIMENSIONS, WE PRINT JUST ABOUT EVERYTHING.<br><br>
+      </td>
+    </tr>
+    <tr class="hometablerow">
+      <td align="center" colspan="2">208-970-8769<br><br>
+          PHANTOMPRINTCO@GMAIL.COM
+      </td>
+    </tr>
+  </table>
+</main>
